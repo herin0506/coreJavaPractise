@@ -1,0 +1,38 @@
+1. For setting up the Environment Variables set the class path where the paths are as follows:
+	(i)C:\Program Files\Java\jdk1.8.0_91\bin -- here the java compiler "javac" is available 
+	(ii)C:\Program Files\Java\jdk1.8.0_91\jre -- here the java runtime environent "java" is available
+	
+	Set these paths using semicoln as seperator for CLASSPATH variable as below:
+	=>	C:\Program Files\Java\jdk1.8.0_91\bin;C:\Program Files\Java\jdk1.8.0_91\jre;.
+	The "." at last denotes your working directory, so that the compiler and jre will find where your programs are.
+	
+	To be safe you can also append the above line to the end of your PATH variable using semicoln as a seperator.
+	
+For more details on setting environment variables visit http://www.ecs.umass.edu/ece/ece122/help/setenvironment.htm
+
+2. To check the correct installation of java one can run the following command in command prompt(cmd):
+	java -version
+	
+	This command with return the installed java version along with the Runtime Environment and Virtual Machine details.
+	If the java is not installed properly then some error stating java is not recognized as an external or internal command.
+	
+3. Firstly I personally suggest every beginer to write program some editor so as to get familir and get hands on with the java syntax, as IDE(Integrated Development Environment) provide intellisense which make you dependent on it.
+
+4. Write a simple first program to print your name. Make sure you save the file with the name of the main class(case sensetive)and the extension as .java .[Refer FirstProgram.java ]
+
+5. Compile the program in cmd using the command : javac <filename.java>
+	This command will create the .class file in same folder where your java program file resides only if there is no error in your program file.
+
+6. .class is the compled file which is byetcode and it can be executed on any OS.
+
+7. Once the bytecode is generated (.class file) then run the program using the command: java <filename>
+	Here the filename do not contain any extension like .java or .class
+	
+	When the command is run it takes .class file to execute it.
+	
+8. Now create another file with and write the same program but change the name of the main class and also create the package. [Refer FirstProgramWithPackage.java]
+	Compile the file using command: javac -d . <filename.java>
+	After compiling the java program file it will generate the bytecode in package(the folder structure).
+	At last execute the program using bytecode using command: java <package.filename> [e.g java com.abc.filename]
+	
+9.
