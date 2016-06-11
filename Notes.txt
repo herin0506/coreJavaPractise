@@ -1,6 +1,8 @@
+Environment Setup and Check:
+----------------------------
 1. For setting up the Environment Variables set the class path where the paths are as follows:
 	(i)C:\Program Files\Java\jdk1.8.0_91\bin -- here the java compiler "javac" is available 
-	(ii)C:\Program Files\Java\jdk1.8.0_91\jre -- here the java runtime environent "java" is available
+	(ii)C:\Program Files\Java\jdk1.8.0_91\jre -- here the java runtime environment "java" is available
 	
 	Set these paths using semicoln as seperator for CLASSPATH variable as below:
 	=>	C:\Program Files\Java\jdk1.8.0_91\bin;C:\Program Files\Java\jdk1.8.0_91\jre;.
@@ -23,16 +25,49 @@ For more details on setting environment variables visit http://www.ecs.umass.edu
 5. Compile the program in cmd using the command : javac <filename.java>
 	This command will create the .class file in same folder where your java program file resides only if there is no error in your program file.
 
-6. .class is the compled file which is byetcode and it can be executed on any OS.
+6. .class is the compled file which is bytecode and it can be executed on any OS.
 
 7. Once the bytecode is generated (.class file) then run the program using the command: java <filename>
 	Here the filename do not contain any extension like .java or .class
 	
-	When the command is run it takes .class file to execute it.
+	When this command is run it takes .class file to execute it.
 	
 8. Now create another file with and write the same program but change the name of the main class and also create the package. [Refer FirstProgramWithPackage.java]
 	Compile the file using command: javac -d . <filename.java>
 	After compiling the java program file it will generate the bytecode in package(the folder structure).
 	At last execute the program using bytecode using command: java <package.filename> [e.g java com.abc.filename]
 	
-9.
+JDK, JRE & JVM:
+---------------
+1. JDK(Java Development Kit): It cotains everything that will be required to develop and run the Java application.
+
+2. JRE(Java Runtime Environment): It contains everything that is required to run the java application which is been complied.
+	It does not contain the code library required to develop the Java Application.
+
+3. JVM(Java virtual Machine): It works on top of Operating System and provide the environment to execute the compiled java code. It uses the bytecode to run the application. It needs the java code library to run the application.
+
+JDE = JRE + required library to develop the java application
+JRE = JVM + required library to run the application
+
+4. Java is portable because:
+	Java Source Code is Machine Neutral.[Written by developer]
+	Compiled Code/Byte Code is Machine Neutral.[Compiled by javac]
+	Byte code execute is Machine Specific.[Executed by JVM]
+	
+	JVM reads the bytecode and generate the machine specific code. So the JVM is different for different types of machines. And therby, JVM takes care of portablity.
+
+Java Class & Object:
+--------------------
+1. The Class is the template for creating the objects which have state and behaviour. In return class have field and method to define the state and behaviour of its object.
+
+SYNTAX: <access_modifier> class <class_name> extends <super_class_name> implements <interface_name>{
+			<static_initializer_block>
+			<ananymous_block>
+			<constructor_declaration>
+			<field_declaration (static or non-static)>
+			<method_declaration (static or non-static>
+			<inner_class_declaration>
+			<nested_interface_declaration>
+			<variables_inside_class (static or non-static)>
+		}
+		
