@@ -70,4 +70,46 @@ SYNTAX: <access_modifier> class <class_name> extends <super_class_name> implemen
 			<nested_interface_declaration>
 			<variables_inside_class (static or non-static)>
 		}
-		
+
+access_modifier: It define who in the Java World can access this class and members of the class.
+class_name: It is the unique name for the class in specific package.
+super_class_name: It is the name of the class which given class extends.
+interface_name: It is the name of an interface which the given class implements.
+
+2. Thumb Rules for Class:
+	There can be only one public class per source code file but can have multiple non-public classes.
+	In case there is any public class in source code file, then the file name must be same as that of public class name.
+	Files with no public class can have any name for the class.
+	Import and Package statements should be applied to all the classes in the same source code file.
+
+3. Object: It implements the state and behaviour of class in the form of variables and methods, and requies some memory allocated.
+
+SYNTAX: <class_name> ClassObjectReference  = new <class_name>();
+	Here the constructor of Class(class_name) will be executed and an object will be created(ClassObjectReference will hold the refernce of the created object in the memory).
+
+As a whole, Class is the creation of the prototype and the Object is the actual implementation of that prototype.
+
+4. The member of the class is accessed by naming the Object followed by a period (dot), followed by the name of the method and the argument list.
+
+SYNTAX: ClassObjectReference.member
+
+5. Class can have only public or default access modifiers.
+
+6. A public class can be seen by all classes from all packages.
+
+7. A class with default access can be seen only by classes within the same package.
+
+8. A class can also have final, abstract and strictpf non-access modifiers.
+
+9. An Abstract Class can not be instantiated.
+
+10. A Final class can not be subclassed.
+
+11. A class can not be both final and abstract.
+
+Constructors in Java:
+---------------------
+
+*******************************************Things to understand in detail*************************
+1. System.out.println
+
