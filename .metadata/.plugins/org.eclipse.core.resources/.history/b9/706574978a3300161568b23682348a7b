@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.herin.example;
+
+/**
+ * @author Lakdawala
+ *
+ */
+public class ConstructorExample {
+	
+	public ConstructorExample(){
+		System.out.println("This is constructor.");
+	}
+	
+	static void classMethod(){
+		System.out.println("This is class method.");
+	}
+
+}

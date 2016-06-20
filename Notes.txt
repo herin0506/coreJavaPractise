@@ -107,9 +107,61 @@ SYNTAX: ClassObjectReference.member
 
 11. A class can not be both final and abstract.
 
-Constructors in Java:
+Constructors in Java [Refer CoreJavaExamples Project]:
 ---------------------
+1. Constructors have only 1 purpose, to create instance of a class.
+
+2. Instantiation includes: (1) memory allocation & (2) meber initialization (This is optional).
+
+3. Methods cannot be used to create an instance of a class.
+
+4. Constructor name needs to be same as that of the class name.
+
+5. Constructor do not contain any return value.
+
+6. Methods have return type alond with non-access modifier(e.g. staic).
+
+7. Methods require return type(e.g. void).
+
+8. As per java naming convention, method name should be camelCase where as that of constructor name should start with capital letter.
+
+9. The method can have same name as that of class and can be distinguised for constructor by looking into its signature which contains the return type and non-access modifier(if present any).
+
+10. Constructors can be called explicitly, but will be invoked when the instance of class is generated using "new" keyword.
+
+11. Java provides the default constructor, which is invoked when no constructor is explicitly provided. This constructor do not contain any parameter nor it does any initiaization or any special action.
+
+12. Constructor can not be static, Final, abstract or overridden.
+
+13. Any attempt to call default consructor will lead to compile time error, if an explicit default constructor is not provided.
+
+14. If a class defines an explicit constructor, it no longer has default constructor to set the state of Objects.
+
+15. Every constructor calls it Superclass consructor.
+
+Constructor Overloading:
+------------------------
+1. All the constructors have same name but they differ in the parameter list. This is constructor overloading.
+
+2. To implement the local chaining of constructor, this() construct is used.
+
+3. this() call in constructor invokes the other constructor with the corresponding parameter list within the same class.
+
+4. this() must be the first statement in th constructor.
+
+Constructor Chaining:
+---------------------
+1. super() invokes the constructor of the super class. If explicitly called then it must be the first statement in the constructor.
+
+2. As every consructor call its Superclass consructor, an implied super() is therefore not included in each const which does not include either this() or an explicit super() call as the  first statement.
+
+3. The explicit super allows parameter values to be passed to the Constructor of its superclass and must have matching parameter types. A super() call in the constructor of a subclass will result in the call of the relevant constructor from the superclass, based on the signature of the call. This is called constructor chaining.
+
+4. If a constructor has neither a this() nor a super() construct as its first statement, then a super() call to the default constructor in the superclass is inserted.
+
+5. The this() construct leads to chaining of constructors in the same class, the super() construct leads to chaining of subclass constructors to Superclass Constructors
+
+6. If a class only defines non-default constructors, then its subclasses will not include an implicit super() call. This will be flagged as a compile-time error.
 
 *******************************************Things to understand in detail*************************
 1. System.out.println
-

@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package com.herin.example;
+
+/**
+ * @author Lakdawala
+ *
+ */
+public class MainClass {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+	
+		ConstructorExample instance =  new ConstructorExample();
+		
+		instance.classMethod();
+	}
+
+}
