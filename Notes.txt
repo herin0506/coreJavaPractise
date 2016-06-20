@@ -163,5 +163,55 @@ Constructor Chaining:
 
 6. If a class only defines non-default constructors, then its subclasses will not include an implicit super() call. This will be flagged as a compile-time error.
 
+Variables:
+----------
+1. Object store their state in variables.
+
+2. Variables are the containers that hold values during the life cycle of an application.
+
+SYNTAX: [<access_modifier>][<non-access_modifier>] <data_type> name_of_variable [= <some_initial_value>];
+
+3. Primitive Data Types: byte, short, int, long, float, double, char, boolean
+
+4. The Wrapper classes corresponding to primitive data types is also available.
+
+5. Variables can be defined anywhere in the code and can have any access modifiers.
+
+Variable Types[]: 
+---------------
+1. Instance Variable: The variables which are defined without STATIC keyword and are outside any method declaration are object specific and are known as Instance variables.
+						Values of these variables are NOT shared among instances.
+						These variables can only be accessed by object of class only.
+						
+2. Static Variable(Class Variable): The variables which are defined with STATIC keyword inside a class but outside any method and are defined outside any method declaration are know as static variables.
+					The values of thses variables are not specific to any instance but are common to all instances of the class. So, they will be shared by all instances of an object.
+					Thses variables can be accessed via object of the class or via class name.
+					
+3. Local Variable(Method Local Variable): The variables which are defined inside any method in a class are called Local Variables.
+					The only modifier that can be applied on these variables is FINAL.
+					These variables needs to be initialized before they can be used else it will retirn into compiletime error.
+					
+4. Method Parameter: Parameters are variables that are passed in method.
+
 *******************************************Things to understand in detail*************************
 1. System.out.println
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
