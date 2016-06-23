@@ -107,9 +107,124 @@ SYNTAX: ClassObjectReference.member
 
 11. A class can not be both final and abstract.
 
-Constructors in Java:
+Constructors in Java [Refer CoreJavaExamples Project]:
 ---------------------
+1. Constructors have only 1 purpose, to create instance of a class.
+
+2. Instantiation includes: (1) memory allocation & (2) meber initialization (This is optional).
+
+3. Methods cannot be used to create an instance of a class.
+
+4. Constructor name needs to be same as that of the class name.
+
+5. Constructor do not contain any return value.
+
+6. Methods have return type alond with non-access modifier(e.g. staic).
+
+7. Methods require return type(e.g. void).
+
+8. As per java naming convention, method name should be camelCase where as that of constructor name should start with capital letter.
+
+9. The method can have same name as that of class and can be distinguised for constructor by looking into its signature which contains the return type and non-access modifier(if present any).
+
+10. Constructors can be called explicitly, but will be invoked when the instance of class is generated using "new" keyword.
+
+11. Java provides the default constructor, which is invoked when no constructor is explicitly provided. This constructor do not contain any parameter nor it does any initiaization or any special action.
+
+12. Constructor can not be static, Final, abstract or overridden.
+
+13. Any attempt to call default consructor will lead to compile time error, if an explicit default constructor is not provided.
+
+14. If a class defines an explicit constructor, it no longer has default constructor to set the state of Objects.
+
+15. Every constructor calls it Superclass consructor.
+
+Constructor Overloading:
+------------------------
+1. All the constructors have same name but they differ in the parameter list. This is constructor overloading.
+
+2. To implement the local chaining of constructor, this() construct is used.
+
+3. this() call in constructor invokes the other constructor with the corresponding parameter list within the same class.
+
+4. this() must be the first statement in the constructor.
+
+Constructor Chaining:
+---------------------
+1. super() invokes the constructor of the super class. If explicitly called then it must be the first statement in the constructor.
+
+2. As every consructor call its Superclass consructor, an implied super() is therefore not included in each const which does not include either this() or an explicit super() call as the  first statement.
+
+3. The explicit super allows parameter values to be passed to the Constructor of its superclass and must have matching parameter types. A super() call in the constructor of a subclass will result in the call of the relevant constructor from the superclass, based on the signature of the call. This is called constructor chaining.
+
+4. If a constructor has neither a this() nor a super() construct as its first statement, then a super() call to the default constructor in the superclass is inserted.
+
+5. The this() construct leads to chaining of constructors in the same class, the super() construct leads to chaining of subclass constructors to Superclass Constructors
+
+6. If a class only defines non-default constructors, then its subclasses will not include an implicit super() call. This will be flagged as a compile-time error.
+
+Variables:
+----------
+1. Object store their state in variables.
+
+2. Variables are the containers that hold values during the life cycle of an application.
+
+SYNTAX: [<access_modifier>][<non-access_modifier>] <data_type> name_of_variable [= <some_initial_value>];
+
+3. Primitive Data Types: byte, short, int, long, float, double, char, boolean
+
+4. The Wrapper classes corresponding to primitive data types is also available.
+
+5. Variables can be defined anywhere in the code and can have any access modifiers.
+
+Variable Types[]: 
+---------------
+1. Instance Variable: The variables which are defined without STATIC keyword and are outside any method declaration are object specific and are known as Instance variables.
+						Values of these variables are NOT shared among instances.
+						These variables can only be accessed by object of class only.
+						
+2. Static Variable(Class Variable): The variables which are defined with STATIC keyword inside a class but outside any method and are defined outside any method declaration are know as static variables.
+					The values of thses variables are not specific to any instance but are common to all instances of the class. So, they will be shared by all instances of an object.
+					Thses variables can be accessed via object of the class or via class name.
+					
+3. Local Variable(Method Local Variable): The variables which are defined inside any method in a class are called Local Variables.
+					The only modifier that can be applied on these variables is FINAL.
+					These variables needs to be initialized before they can be used else it will retirn into compiletime error.
+					
+4. Method Parameter: Parameters are variables that are passed in method.
+
+Local Variables:
+----------------
+1. Local Variables cananot have any Access Level as their scope is limited to the method in which it is declared.
+
+2. Local variables can have only one non-access modifer, final.
+
+3. Local variables need to be initialized, they can not have default value.
+
+Instance Variable:
+------------------
+1. Instance variable can use any of the four access modifiers.
+
+2. They can be marked final and transient.
+
+3. Thet cannot be marked abstract, synchronized, strictfp, native or static.
+
+Transient Keyword:
+------------------
+1. Transient keyword can only be applied to fields or member variable. Applying it to method or local variable is compilation error.
+
+2. Another important point is that you can declare an variable static and transient at same time and java compiler doesn't complain but doing that doesn't make any sense because transient is to instruct "do not save this field" and static variables are not saved anyway during serialization.
+
+3. In similar way you can apply transient and final keyword together to a variable compiler will not complain but you will face another problem of reinitializing a final variable during deserialization.
+
+4. Transient variable in java is not persisted or saved when an object gets serialized.
+
+public static void main(string args[]) Explanation:
+---------------------------------------------------
+1. 
+
+*******************
+Serialization is a process by which object's state is saved by JVM and during deserialization it’s recovered by JVM. During Serialization all property of object gets saved except static and transient.
 
 *******************************************Things to understand in detail*************************
 1. System.out.println
-
