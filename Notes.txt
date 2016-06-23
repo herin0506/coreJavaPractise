@@ -177,7 +177,7 @@ SYNTAX: [<access_modifier>][<non-access_modifier>] <data_type> name_of_variable 
 
 5. Variables can be defined anywhere in the code and can have any access modifiers.
 
-Variable Types[]: 
+Variable Types[VariablesExample.java]: 
 ---------------
 1. Instance Variable: The variables which are defined without STATIC keyword and are outside any method declaration are object specific and are known as Instance variables.
 						Values of these variables are NOT shared among instances.
