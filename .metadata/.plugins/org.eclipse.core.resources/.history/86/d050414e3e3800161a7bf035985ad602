@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.herin.example;
+
+/**
+ * @author Lakdawala
+ *
+ */
+public class VariablesExample {
+	
+	int instanceField;
+	
+	static int staticField;
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

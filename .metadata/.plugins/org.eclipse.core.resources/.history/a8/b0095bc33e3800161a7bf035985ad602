@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+package com.herin.example;
+
+/**
+ * @author Lakdawala
+ *
+ */
+public class VariablesExample {	
+
+	/*
+	 * Below variable is INSTANCE VARIABLE as it is outside any method and it is
+	 * not using STATIC modifier with it. It is using default access modifier.
+	 */
+	int instanceField;
+	
+	/*
+	 * Below variable is STATIC variable as it is outside any method and it is
+	 * using STATIC modifier with it. It is using default access modifier.
+	 */
+	static String staticField;
+	//static int staticField;
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
