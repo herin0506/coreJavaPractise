@@ -197,7 +197,7 @@ Local Variables:
 ----------------
 1. Local Variables cananot have any Access Level as their scope is limited to the method in which it is declared.
 
-2. Local variables can have only one non-access modifer, final.
+2. Local variables can have only one non-access modifier, final.
 
 3. Local variables need to be initialized, they can not have default value.
 
@@ -221,10 +221,42 @@ Transient Keyword:
 
 public static void main(string args[]) Explanation:
 ---------------------------------------------------
-1. 
+1. public: It is an access modifier. It defines who can access this method. This method will be accessible by any class.
+
+2. static: This means tnat the given method or variable is not instance related but class related. It can be accessed without creating the instance of the class.
+
+3 void: It is the return type of the method. This method will not return any value.
+
+3. main: This is the name of the method. This methodname is searched by JVM as a starting point for an application with a particular signature only.
+
+4. String args[]: This is the parameter to the main method.
+
+Packages:
+---------
+1. These are used to avoid naming conflicts.
+
+2. Used ro control access (Access Modifier).
+
+3. Used to bundle the group of related types.
+
+Access Modifier:
+----------------
+1. Classes in java can use only public and default access modifiers where as Instance and Static varia.bles, methods can use Public, Private, Protected and/or Default. but for local variables not access modifier is applicable.
+
+2. If the Class is not visible then no variable will be accessible, even if it is set to public.
+
+3. Public: The given class will be accessible to all the classes available in Java world. If a variable/method is set public, it can be accessible from any class available in Java world. Any method in any class can access the given variable/method via Inheritance or Direct access.
+
+4. Default: The given class will be accessible to the classes which are defined in same package. If a varibale/method is set default, it will be accessible to the classes which are defined in the same package. Any method in any class which is defined in the same package can access the variable/method via Inheritance or Direct acccess.
+
+5. Protected: If a variable/method is set protected inside a class, it will be accessible from its sub-classes defined in the same or the different package only via Inheritance.
+
+6. Private: If a variable/method is defined private, it'll be accessible only from within the class in which is is defined. Such variables are not accessible from outside the defined class ad not even in its subclass.
 
 *******************
 Serialization is a process by which object's state is saved by JVM and during deserialization it’s recovered by JVM. During Serialization all property of object gets saved except static and transient.
 
 *******************************************Things to understand in detail*************************
 1. System.out.println
+*******************************************Things Pending on my part*************************
+1. Program for access modifiers.
